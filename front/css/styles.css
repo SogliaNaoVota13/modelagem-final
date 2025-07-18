@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #1c1c1c;
+  color: #f4f4f4;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 2.5rem;
+  color: #ffde59;
+}
+
+/* Container do formulário para centralizar e dar largura fixa */
+form {
+  background-color: #2a2a2a;
+  max-width: 400px;
+  margin: 40px auto 60px;
+  padding: 25px 30px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 222, 89, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Labels amarelos */
+label {
+  color: #ffde59;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+/* Inputs estilo card escuro, cantos arredondados e texto claro */
+input {
+  background-color: #3a3a3a;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 12px;
+  color: #f4f4f4;
+  font-size: 1rem;
+  transition: background-color 0.2s ease;
+}
+
+input::placeholder {
+  color: #cfcfcf;
+}
+
+input:focus {
+  outline: none;
+  background-color: #505050;
+}
+
+/* Botão amarelo com efeito hover */
+button[type="submit"] {
+  margin-top: 20px;
+  padding: 12px 0;
+  background-color: #ffde59;
+  border: none;
+  border-radius: 12px;
+  color: #1c1c1c;
+  font-weight: 700;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #e6cc40;
+}
+
+#linkVoltar {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  color: #ffde59;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+  background-color: transparent;
+  box-shadow: 0 0 6px rgba(255, 222, 89, 0.2);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  user-select: none;
+  z-index: 1000;
+}
+
+#linkVoltar:hover {
+  background-color: #ffde59;
+  color: #1c1c1c;
+}
