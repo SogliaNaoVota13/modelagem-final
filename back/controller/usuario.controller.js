@@ -6,7 +6,7 @@ const cadastrarUsuario = async (req, res) => {
     const dados = req.body;
     try {
         const valores = await Usuario.create(dados);
-        res.status(200).json({ message: 'Usuário cadastrado com sucesso', valores });
+        res.status(200).json(valores);
     } catch (err) {
         console.error('Erro ao cadastrar usuário', err);
         res.status(500).json({ message: 'Erro ao cadastrar usuário' });
@@ -33,8 +33,8 @@ const listarPorID = async (req, res) => {
             console.log('ID não encontrado');
             res.status(404).json({ message: 'ID não encontrado' });
         } else {
-            console.log('Usuário encontrado', valores);
-            res.status(200).json({ message: 'Usuário encontrado', valores });
+            console.log(valores);
+            res.status(200).json(valores);
         }
     } catch (err) {
         console.error('Erro ao listar por ID', err);
