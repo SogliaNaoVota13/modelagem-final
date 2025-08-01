@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/styles.css"> 
+<script src="atualizarProduto.js"defer></script>
+  <title>Atualizar Produto</title>
+</head>
+<body>
+    <a href="../index.html" id="linkVoltar">← Voltar</a>
+  <h1>Atualizar Produto</h1>
+
+ <form>
+    <label for="id">ID:</label>
+<input type="number" id="id" placeholder="Digite o ID do produto" required>
+
+<label for="nm_produto">Nome:</label>
+<input type="text" id="nm_produto" placeholder="Digite o nome do produto" required>
+
+<label for="descricao">Descrição:</label>
+<input type="text" id="descricao" placeholder="Digite a descrição do produto" required>
+
+<label for="categoria">Categoria:</label>
+<input type="text" id="categoria" placeholder="Digite a categoria do produto" required>
+
+<label for="preco">Preço (R$):</label>
+<input type="number" id="preco" placeholder="Digite o preço do produto" step="0.01" required>
+
+<label for="porcentagemDesconto">Desconto (%):</label>
+<input type="number" id="porcentagemDesconto" placeholder="Digite o desconto em %" required>
+
+<label for="estoque">Estoque:</label>
+<input type="number" id="estoque" placeholder="Digite a quantidade em estoque" required>
+
+<label for="marca">Marca:</label>
+<input type="text" id="marca" placeholder="Digite a marca do produto" required>
+
+<label for="ft_produto">Imagem do produto (URL):</label>
+<input type="url" id="ft_produto" placeholder="Cole a URL da imagem do produto" required>
+
+<button type="submit" id="btnAtualizar">Atualizar Produto</button>
+
+<div id="res"></div>
+    
+</form>
+
+</body>
+</html>

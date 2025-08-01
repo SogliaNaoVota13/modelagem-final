@@ -55,7 +55,7 @@ const cadastrarProduto = async (req, res) => {
   try {
     const dados = req.body;
     const novoProduto = await Produto.create(dados);
-    res.status(201).json({ message: 'Produto cadastrado com sucesso', produto: novoProduto });
+    res.status(201).json(novoProduto);
   } catch (err) {
     console.error('Erro ao cadastrar produto:', err);
     res.status(500).json({ message: 'Erro ao cadastrar produto' });
