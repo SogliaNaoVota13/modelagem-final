@@ -47,7 +47,7 @@ btnCadastrar.addEventListener('click', (e) => {
             res.innerHTML += "Data do Nascimento: "+valores.dataNascimento + '<br>'
         })
         .catch((err) => {
-            console.error('Erro ao cadastrar Usuário!')
+            console.error('Erro ao cadastrar Usuário!',err)
             res.innerHTML = 'Erro ao cadastrar Usuário!'
         })
 })

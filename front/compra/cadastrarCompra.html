@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../css/styles.css"> 
+<script src="cadastrarCompra.js"defer></script>
+  <title>Cadastrar Compra</title>
+</head>
+<body>
+    <a href="../index.html" id="linkVoltar">← Voltar</a>
+  <h1>Cadastro de Compra</h1>
+
+ <form>
+    <label for="id_usuario">ID Usuario:</label>
+    <input type="text" id="id_usuario" placeholder="Digite ID do usuario" required>
+
+    <label for="id_produto">ID Produto:</label>
+    <input type="text" id="id_produto" placeholder="Digite ID do produto" required>
+
+    <label for="quant">Quantidade:</label>
+    <input type="number" id="quant" placeholder="Digite a quantidade do produto" required>
+
+    <label for="dataCompra">Data de compra:</label>
+    <input type="date" id="dataCompra" placeholder="Digite a data de compra do produto" required>
+
+    <label for="precoUnitario">Preço Unitario:</label>
+    <input type="number" id="precoUnitario" placeholder="Digite o preço do produto" required>
+
+    <label for="descontoAplicado">Desconto:</label>
+    <input type="number" id="descontoAplicado" placeholder="Digite a porcentagem do desconto" required>
+
+    <label for="precoFinal">Preço final:</label>
+    <input type="number" id="precoFinal" placeholder="Digite o preço final" required>
+
+    <label for="formaPagamento">Forma de pagamento:</label>
+    <input type="text" id="formaPagamento" placeholder="Digite a forma de pagamento" required>
+
+    <label for="statusCompra">Status da compra:</label>
+    <input type="text" id="statusCompra" placeholder="Em aprovação, cancelado, aprovado" required>
+
+     <button type="submit" id="btnCadastrar">Cadastrar Compra</button>
+  <div id="res"></div> 
+</body>
+</html>
