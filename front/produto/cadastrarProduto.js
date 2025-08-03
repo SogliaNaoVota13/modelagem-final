@@ -32,6 +32,7 @@ btnCadastrar.addEventListener('click', (e) => {
     })
         .then(response => response.json())
        .then(valores => {
+        console.log(valores)
     const produto = valores.produto;
 
     res.innerHTML = `

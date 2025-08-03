@@ -29,7 +29,7 @@ app.delete('/usuario/id/:id', usuarioController.apagarUsuario)
 //Controller Produto
 app.post('/produto', produtoController.cadastrarProduto)
 app.get('/produto', produtoController.listarProduto)
-app.get('/produto/nome/:nome', produtoController.listarProduto)
+app.get('/produto/nome/:nome', produtoController.listarProdutoPorNome)
 app.get('/produto/id/:id', produtoController.listarProdutoPorID)
 app.put('/produto/id/:id', produtoController.atualizarProduto)
 app.delete('/produto/id/:id', produtoController.apagarProduto)
@@ -37,7 +37,6 @@ app.delete('/produto/id/:id', produtoController.apagarProduto)
 //Controller Compra
 app.post('/compra', compraController.cadastrarCompra)
 app.get('/compra', compraController.listarCompra)
-app.get('/compra/id/:id', compraController.listarCompraPorID)
 app.put('/compra/id/:id', compraController.atualizarCompra)
 app.delete('/compra/id/:id', compraController.apagarCompra)
 

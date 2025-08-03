@@ -31,36 +31,63 @@ const listarProdutoPorID = async (req, res) => {
   }
 };
 
+// const listarProdutoPorNome = async (req, res) => {
+//   try {
+//     const { nome } = req.params;
+//     const produtos = await Produto.findAll({
+//       where: {
+//         nome: { [Op.like]: `%${nome}%` }
+//       }
+//     });
+
+//     if (produtos.length === 0) {
+//       return res.status(404).json({ message: 'Nenhum produto encontrado com esse nome' });
+//     }
+
+//     res.status(200).json({ message: 'Produtos encontrados', produtos });
+//   } catch (err) {
+//     console.error('Erro ao buscar por nome:', err);
+//     res.status(500).json({ message: 'Erro ao buscar por nome' });
+//   }
+// };
+
 const listarProdutoPorNome = async (req, res) => {
-  try {
-    const { nome } = req.params;
-    const produtos = await Produto.findAll({
-      where: {
-        nome: { [Op.like]: `%${nome}%` }
-      }
-    });
+    const nome = req.params.nome;
+    try {
+        const produtos = await Produto.findAll({
+            where: {
+                nm_produto: {
+                    [Op.like]: `%${nome}%`
+                }
+            }
+        });
 
-    if (produtos.length === 0) {
-      return res.status(404).json({ message: 'Nenhum produto encontrado com esse nome' });
+        if (produtos.length === 0) {
+            return res.status(404).json({ message: 'Nenhum produto encontrado com esse nome' });
+        }
+
+        res.status(200).json({ message: 'Produtos encontrados', produtos });
+    } catch (err) {
+        console.error('Erro ao buscar por nome', err);
+        res.status(500).json({ message: 'Erro ao buscar por nome' });
     }
-
-    res.status(200).json({ message: 'Produtos encontrados', produtos });
-  } catch (err) {
-    console.error('Erro ao buscar por nome:', err);
-    res.status(500).json({ message: 'Erro ao buscar por nome' });
-  }
 };
+
 
 const cadastrarProduto = async (req, res) => {
   try {
     const dados = req.body;
     const novoProduto = await Produto.create(dados);
-    res.status(201).json(novoProduto);
+    res.status(201).json({
+      message: 'Produto cadastrado com sucesso',
+      produto: novoProduto
+    });
   } catch (err) {
     console.error('Erro ao cadastrar produto:', err);
     res.status(500).json({ message: 'Erro ao cadastrar produto' });
   }
 };
+
 
 const atualizarProduto = async (req, res) => {
   try {
